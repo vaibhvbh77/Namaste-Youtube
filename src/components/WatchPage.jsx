@@ -33,9 +33,9 @@ const WatchPage = () => {
   };
 
   return (
-    <div className="px-5 flex flex-col">
+    <div className="px-5 flex flex-col" style={{ width: "1000px" }}>
       <iframe
-        width="1200"
+        width="1000"
         height="500"
         src={"https://www.youtube.com/embed/" + searchParams.get("v")}
         title="YouTube video player"
@@ -44,10 +44,12 @@ const WatchPage = () => {
         allowFullScreen
       ></iframe>
       <DetailsBar snippet={videoDetails.snippet} />
-      <div className="text-3xl">{videoDetails?.snippet?.title}</div>
-      <div className="shadow-lg">
-        <h3>{videoDetails?.statistics?.viewCount} Views</h3>
-        {videoDetails?.snippet?.description}
+      <div className="bg-gray-100">
+        <div className="text-3xl">{videoDetails?.snippet?.title}</div>
+        <div className="shadow-lg">
+          <h3>{videoDetails?.statistics?.viewCount} Views</h3>
+          {videoDetails?.snippet?.description}
+        </div>
       </div>
       <CommentsContainer />
     </div>

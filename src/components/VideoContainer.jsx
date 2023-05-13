@@ -13,7 +13,7 @@ const VideoContainer = () => {
     const json = await data.json();
     setListVideos(json.items);
   };
-  if (listVideos.length == 0) return "";
+  if (!listVideos) return "";
   return (
     <div className="flex flex-wrap mx-15 p-5 -mt-3">
       {listVideos.map((curr) => {

@@ -6,7 +6,7 @@ const DetailsBar = ({ snippet }) => {
       <img
         src={snippet?.thumbnails?.default?.url}
         alt="Logo"
-        className="h-10 w-10 rounded-lg mx-10 "
+        className="h-10 w-10 rounded-lg -mx-1 "
       ></img>
       <h1 className="mx-10 p-2 rounded-lg bg-gray-200">
         {snippet?.channelTitle}

@@ -3,11 +3,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { toggleMenu } from "../utils/appSlice";
 import { SEARCH_SUGGESTIONS } from "../utils/constants";
 import { cacheResults } from "../utils/searchSlice";
+import { Link } from "react-router-dom";
 const Head = () => {
   const disptach = useDispatch();
   const [searchQuery, setSearchQuery] = useState("");
   const [searchSuggestion, setSearchSuggestions] = useState([]);
-  const [showSuggestions, setShowSuggestions] = useState(false);
+  const [showSuggestions, setShowSuggestions] = useState(true);
   const cacheSearch = useSelector((store) => store.search);
 
   const searchQueryHandler = (e) => {
@@ -42,7 +43,7 @@ const Head = () => {
   };
   return (
     <div className="grid grid-flow-col p-2 m-2 shadow-lg top-0 sticky bg-white  ">
-      <div className="flex pt-1">
+      <div className="flex pt-1 px-3 m-3">
         <img
           onClick={toogleMenu}
           className="h-8 mx-3 cursor-pointer"
@@ -50,7 +51,7 @@ const Head = () => {
           alt="menu"
         />
         <img
-          className="h-14 pb-4"
+          className="h-12 pb-4 mx-4 w-50"
           src="https://lh3.googleusercontent.com/3zkP2SYe7yYoKKe47bsNe44yTgb4Ukh__rBbwXwgkjNRe4PykGG409ozBxzxkrubV7zHKjfxq6y9ShogWtMBMPyB3jiNps91LoNH8A=s500"
           alt=""
         />
@@ -65,24 +66,35 @@ const Head = () => {
             value={searchQuery}
             onChange={searchQueryHandler}
             onFocus={() => setShowSuggestions(true)}
-            onBlur={() => setShowSuggestions(false)}
+            onBlur={() => setTimeout(() => setShowSuggestions(false), 200)}
           />
-          <button
-            className="border border-grey-400 px-5 rounded-r-full py-2"
-            type="button"
-          >
-            🔍
-          </button>
+          <Link to={"/search?s=" + searchQuery}>
+            <button
+              className="border border-grey-400 px-5 rounded-r-full py-2"
+              type="button"
+            >
+              🔍
+            </button>
+          </Link>
         </div>
         <div>
-          {searchSuggestion.length > 0 && showSuggestions && (
+          {searchSuggestion?.length > 0 && showSuggestions && (
             <div className="fixed bg-white py-2 px-2 w-[30rem] shadow-lg rounded-lg border border-gray-100">
               <ul>
                 {searchSuggestion?.map((curr, i) => {
                   return (
-                    <li className="py-2 shadow-sm hover:bg-gray-100" key={i}>
-                      🔍 {curr}
-                    </li>
+                    // <Link to={"/search" + curr}>
+                    <Link to={"/search?v=" + curr.trim()}>
+                      <div className="flex">
+                        <li
+                          className=" cursor-pointer py-2 shadow-sm hover:bg-gray-100 "
+                          onClick={() => setSearchQuery(curr)}
+                          key={i}
+                        >
+                          🔍 {curr}
+                        </li>
+                      </div>
+                    </Link>
                   );
                 })}
               </ul>
