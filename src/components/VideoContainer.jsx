@@ -15,11 +15,11 @@ const VideoContainer = () => {
   };
   if (listVideos.length == 0) return "";
   return (
-    <div className="flex flex-wrap">
+    <div className="flex flex-wrap mx-15 p-5 -mt-3">
       {listVideos.map((curr) => {
         return (
-          <Link to={"/watch?v=" + curr.id}>
-            <VideoCard info={curr} key={curr.id} />
+          <Link key={curr.id} to={"/watch?v=" + curr.id}>
+            <VideoCard info={curr} />
           </Link>
         );
       })}

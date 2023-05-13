@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { useSearchParams } from "react-router-dom";
 import { closeMenu } from "../utils/appSlice";
 import { API_VIDEO_DETAIL, GOOGLE_API_KEY } from "../utils/constants";
+import CommentsContainer from "./CommentsContainer";
 import DetailsBar from "./DetailsBar";
 const WatchPage = () => {
   const dispatch = useDispatch();
@@ -23,8 +24,7 @@ const WatchPage = () => {
     );
     const json = await data.json();
     const { snippet, statistics } = json.items[0];
-    console.log(snippet);
-    console.log(statistics);
+
     const videDetailPageObj = {
       snippet,
       statistics,
@@ -33,7 +33,7 @@ const WatchPage = () => {
   };
 
   return (
-    <div className="px-5">
+    <div className="px-5 flex flex-col">
       <iframe
         width="1200"
         height="500"
@@ -49,6 +49,7 @@ const WatchPage = () => {
         <h3>{videoDetails?.statistics?.viewCount} Views</h3>
         {videoDetails?.snippet?.description}
       </div>
+      <CommentsContainer />
     </div>
   );
 };
