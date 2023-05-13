@@ -8,3 +8,5 @@ export const API_VIDEO_DETAIL =
   GOOGLE_API_KEY;
 // Authorization: Bearer[YOUR_ACCESS_TOKEN];
 // Accept: application / json;
+export const SEARCH_SUGGESTIONS =
+  "http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=";
