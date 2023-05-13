@@ -11,7 +11,6 @@ const VideoContainer = () => {
   const getDataFromYoutube = async () => {
     const data = await fetch(API);
     const json = await data.json();
-    console.log(json);
     setListVideos(json.items);
   };
   if (listVideos.length == 0) return "";

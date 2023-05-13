@@ -3,6 +3,7 @@ import React from "react";
 const VideoCard = ({ info }) => {
   const { snippet, statistics } = info;
   const { thumbnails, title, channelTitle } = snippet;
+
   return (
     <div className="p-2 m-2 w-72 shadow-lg">
       <img src={thumbnails.medium.url} className="rounded-lg" alt="" />
