@@ -10,8 +10,10 @@ const VideoCard = ({ info }) => {
       <div className="">
         <ul>
           <li className="font-bold py-2">{title}</li>
-          <li>{channelTitle}</li>
-          <li>{statistics.viewCount} Views</li>
+          <div className="text-gray-500">
+            <li>{channelTitle}</li>
+            <li>{statistics.viewCount} Views</li>
+          </div>
         </ul>
       </div>
     </div>

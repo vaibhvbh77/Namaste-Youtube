@@ -4,10 +4,12 @@ import { useSelector } from "react-redux";
 import Head from "./Head";
 const Body = (props) => {
   const toggleSideBar = useSelector((store) => store.app.isOpen);
+  const darkTheme = useSelector((store) => store.app.darkTheme);
+
   return (
     <div>
       <Head />
-      <div className="flex">
+      <div className={darkTheme ? "flex bg-black" : "flex bg-white"}>
         {toggleSideBar ? <SideBar /> : ""}
         <Outlet />
       </div>

@@ -10,3 +10,4 @@ export const API_VIDEO_DETAIL =
 // Accept: application / json;
 export const SEARCH_SUGGESTIONS =
   "http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=";
+export const OFF_SET_LIMIT = 25;

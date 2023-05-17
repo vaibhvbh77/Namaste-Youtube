@@ -1,4 +1,5 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import Comment from "./Comment";
 
 const commentsData = [
@@ -67,10 +68,17 @@ const commentsData = [
   },
 ];
 const CommentList = ({ data }) => {
+  const darkTheme = useSelector((store) => store.app.darkTheme);
   return data.map((curr, index) => (
     <div>
       <Comment data={curr} key={index} />
-      <div className="pl-5 border border-l-black ml-5">
+      <div
+        className={
+          darkTheme
+            ? "pl-5 border border-l-white ml-5"
+            : "pl-5 border border-l-black ml-5"
+        }
+      >
         <CommentList data={curr.replies} />
       </div>
     </div>
