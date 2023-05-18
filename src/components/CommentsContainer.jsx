@@ -4,39 +4,39 @@ import Comment from "./Comment";
 
 const commentsData = [
   {
-    name: "Akshay Saini",
+    name: "Testing usere Name",
     text: "Lorem ipsum jasd jlkus sas  kjkjkjs fhoasur fns ",
     replies: [],
   },
   {
-    name: "Akshay Saini",
+    name: "Testing usere Name",
     text: "Lorem ipsum jasd jlkus sas  kjkjkjs fhoasur fns ",
     replies: [
       {
-        name: "Akshay Saini",
+        name: "Testing usere Name",
         text: "Lorem ipsum jasd jlkus sas  kjkjkjs fhoasur fns ",
         replies: [],
       },
       {
-        name: "Akshay Saini",
+        name: "Testing User",
         text: "Lorem ipsum jasd jlkus sas  kjkjkjs fhoasur fns ",
         replies: [],
       },
       {
-        name: "Akshay Saini",
+        name: "Testing User",
         text: "Lorem ipsum jasd jlkus sas  kjkjkjs fhoasur fns ",
         replies: [
           {
-            name: "Akshay Saini",
+            name: "Testing User",
             text: "Lorem ipsum jasd jlkus sas  kjkjkjs fhoasur fns ",
             replies: [],
           },
           {
-            name: "Akshay Saini",
+            name: "Testing User",
             text: "Lorem ipsum jasd jlkus sas  kjkjkjs fhoasur fns ",
             replies: [
               {
-                name: "Akshay Saini",
+                name: "Testing User",
                 text: "Lorem ipsum jasd jlkus sas  kjkjkjs fhoasur fns ",
                 replies: [],
               },
@@ -47,22 +47,22 @@ const commentsData = [
     ],
   },
   {
-    name: "Akshay Saini",
+    name: "Testing User",
     text: "Lorem ipsum jasd jlkus sas  kjkjkjs fhoasur fns ",
     replies: [],
   },
   {
-    name: "Akshay Saini",
+    name: "Testing User",
     text: "Lorem ipsum jasd jlkus sas  kjkjkjs fhoasur fns ",
     replies: [],
   },
   {
-    name: "Akshay Saini",
+    name: "Testing User",
     text: "Lorem ipsum jasd jlkus sas  kjkjkjs fhoasur fns ",
     replies: [],
   },
   {
-    name: "Akshay Saini",
+    name: "Testing User",
     text: "Lorem ipsum jasd jlkus sas  kjkjkjs fhoasur fns ",
     replies: [],
   },

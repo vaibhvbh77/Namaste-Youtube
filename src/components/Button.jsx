@@ -7,8 +7,8 @@ const Button = ({ name }) => {
     <button
       className={
         darkTheme
-          ? "m-3 py-2 px-5 rounded-lg bg-gray-300"
-          : "m-3 py-2 px-5 rounded-lg bg-gray-200"
+          ? "m-3 py-1 px-5 rounded-lg bg-red-600 text-white"
+          : "m-3 py-1 px-5 rounded-lg bg-gray-200"
       }
     >
       {name}

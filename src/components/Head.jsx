@@ -53,7 +53,7 @@ const Head = () => {
       <div className="flex pt-1 px-3 m-3">
         <img
           onClick={toogleMenu}
-          className="h-8 -mx-4 cursor-pointer"
+          className="h-[40px] w-[60px] -mx-3 my-6 cursor-pointer"
           src={
             darkTheme
               ? "https://res.cloudinary.com/practicaldev/image/fetch/s--pwlGUbeq--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/gt5xtiacq4sjqmxuz2d7.gif"
@@ -63,7 +63,7 @@ const Head = () => {
         />
         <Link to="/">
           <img
-            className="h-12 pb-4 mx-4 w-50"
+            className="h-[80px] w-[110px] pb-4 mx-4 my-4 w-50"
             src={
               darkTheme
                 ? "https://www.cultofmac.com/wp-content/uploads/2018/01/YouTube-dark.jpg"
@@ -79,7 +79,7 @@ const Head = () => {
           <input
             className={
               darkTheme
-                ? "bg-black w-1/2 border border-slate-500 p-2 rounded-l-full px-2 text-white shadow-lg"
+                ? "bg-black w-1/2  border border-slate-500 p-2 rounded-l-full px-2 text-white shadow-lg"
                 : "w-1/2 border border-grey-400 p-2 rounded-l-full px-2 bg-white"
             }
             type="text"
@@ -130,7 +130,7 @@ const Head = () => {
 
       <div className="col-span-1">
         <img
-          className="h-8 my-3"
+          className="h-8 my-3 rounded-2xl"
           src={
             !darkTheme
               ? "https://cdn-icons-png.flaticon.com/512/61/61205.png"

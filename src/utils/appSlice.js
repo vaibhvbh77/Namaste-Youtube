@@ -7,7 +7,7 @@ const appSlice = createSlice({
     darkTheme: false,
   },
   reducers: {
-    toggleMenu: (state, action) => {
+    toggleMenu: (state) => {
       state.isOpen = !state.isOpen;
     },
     closeMenu: (state) => {
