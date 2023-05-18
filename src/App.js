@@ -1,5 +1,9 @@
 import { Provider } from "react-redux";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  createHashRouter,
+  RouterProvider,
+} from "react-router-dom";
 import "./App.css";
 import Body from "./components/Body";
 import Head from "./components/Head";
@@ -8,7 +12,7 @@ import SearchResult from "./components/SearchResult";
 import WatchPage from "./components/WatchPage";
 import store from "./utils/store";
 
-const appRouter = createBrowserRouter([
+const appRouter = createHashRouter([
   {
     path: "/",
     element: <Body />,
