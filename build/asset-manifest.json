@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.5a7da174.css",
-    "main.js": "/static/js/main.0c224df8.js",
-    "static/js/787.43d59d76.chunk.js": "/static/js/787.43d59d76.chunk.js",
-    "index.html": "/index.html",
-    "main.5a7da174.css.map": "/static/css/main.5a7da174.css.map",
-    "main.0c224df8.js.map": "/static/js/main.0c224df8.js.map",
-    "787.43d59d76.chunk.js.map": "/static/js/787.43d59d76.chunk.js.map"
+    "main.css": "/Namaste-Youtube/static/css/main.5a7da174.css",
+    "main.js": "/Namaste-Youtube/static/js/main.b0c3e1c5.js",
+    "static/js/787.43d59d76.chunk.js": "/Namaste-Youtube/static/js/787.43d59d76.chunk.js",
+    "index.html": "/Namaste-Youtube/index.html",
+    "main.5a7da174.css.map": "/Namaste-Youtube/static/css/main.5a7da174.css.map",
+    "main.b0c3e1c5.js.map": "/Namaste-Youtube/static/js/main.b0c3e1c5.js.map",
+    "787.43d59d76.chunk.js.map": "/Namaste-Youtube/static/js/787.43d59d76.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5a7da174.css",
-    "static/js/main.0c224df8.js"
+    "static/js/main.b0c3e1c5.js"
   ]
 }
