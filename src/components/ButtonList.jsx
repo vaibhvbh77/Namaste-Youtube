@@ -6,7 +6,7 @@ import Button from "./Button";
 const ButtonList = () => {
   const darkTheme = useSelector((store) => store.app.darkTheme);
   return (
-    <div className={!darkTheme ? "flex  mb-4" : "flex bg-black"}>
+    <div className={!darkTheme ? "flex  m-1 mx-6" : "flex m-1 bg-black mx-6 "}>
       <Link to={"/search?v=" + "ALL"}>
         <Button name="All" />
       </Link>

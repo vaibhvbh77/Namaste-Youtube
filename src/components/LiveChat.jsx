@@ -8,10 +8,9 @@ const LiveChat = () => {
   const dispatch = useDispatch();
   const messages = useSelector((store) => store.chat.messages);
   const darkTheme = useSelector((store) => store.app.darkTheme);
-  console.log(messages);
+  // console.log(messages);
   useEffect(() => {
     const message = setInterval(() => {
-      console.log("Messagining.....");
       dispatch(
         addMessages({
           name: generate(),
@@ -29,7 +28,7 @@ const LiveChat = () => {
       <div
         className={
           darkTheme
-            ? "flex flex-col-reverse h-[450px] bg-black border border-gray-600 w-[370px] ml-[95px] p-2 bg-slate-100 rounded-lg overflow-y-scroll "
+            ? "flex flex-col-reverse h-[450px]  border border-gray-600 w-[370px] ml-[95px] p-2 bg-black rounded-lg overflow-y-scroll "
             : "flex flex-col-reverse h-[450px] border border-black w-[370px] ml-[95px] p-2 bg-slate-100 rounded-lg overflow-y-scroll "
         }
       >

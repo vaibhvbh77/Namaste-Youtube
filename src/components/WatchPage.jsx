@@ -63,11 +63,27 @@ const WatchPage = () => {
       <DetailsBar snippet={videoDetails.snippet} />
       <div className={darkTheme ? "bg-black" : "bg-gray-100"}>
         <div className="text-3xl">{videoDetails?.snippet?.title}</div>
-        <div className="shadow-lg ">
+        <div className="shadow-lg bg-transparent rounded">
           <h3>{videoDetails?.statistics?.viewCount} Views</h3>
           {/* <p className={darkTheme ? "shadow-lg" : "bg-black"}> */}
-          {showDescription}
-          {/* </p> */}
+          {showDescription ? (
+            <p>{videoDetails?.snippet?.description}</p>
+          ) : (
+            <p>
+              {videoDetails?.snippet?.description?.slice(0, 200)}
+              <br />
+            </p>
+          )}
+          <button
+            className={
+              darkTheme
+                ? "shadow-mg bg-red-700 rounded p-1 m-1 text-white"
+                : "shadow-mg bg-gray-200 rounded p-1 m-1"
+            }
+            onClick={() => setShowDescrition((prev) => !prev)}
+          >
+            See More
+          </button>
         </div>
       </div>
       <CommentsContainer />
