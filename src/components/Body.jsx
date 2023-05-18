@@ -7,7 +7,6 @@ const Body = (props) => {
     <div>
       <div className="flex">
         {toggleSideBar ? <SideBar /> : ""}
-        hi there
         <Outlet />
       </div>
     </div>
