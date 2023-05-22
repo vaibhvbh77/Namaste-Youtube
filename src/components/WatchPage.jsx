@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useSearchParams } from "react-router-dom";
 import { closeMenu } from "../utils/appSlice";
+
 import { API_VIDEO_DETAIL, GOOGLE_API_KEY } from "../utils/constants";
 import CommentsContainer from "./CommentsContainer";
 import DetailsBar from "./DetailsBar";
@@ -86,6 +87,7 @@ const WatchPage = () => {
           </button>
         </div>
       </div>
+
       <CommentsContainer />
     </div>
   );

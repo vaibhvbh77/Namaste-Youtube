@@ -1,6 +1,7 @@
 import SideBar from "./SideBar";
 import { Outlet } from "react-router-dom";
 import { useSelector } from "react-redux";
+import Shimmer from "./Shimmer";
 import Head from "./Head";
 const Body = (props) => {
   const toggleSideBar = useSelector((store) => store.app.isOpen);
